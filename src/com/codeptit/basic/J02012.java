@@ -6,8 +6,8 @@ class InsertionSort {
         System.out.println("Buoc 0: " + list.get(0));
 
         for (int i = 1; i < list.size(); i++) {
-            int x = list.get(i); // lấy ra phần tử cần sắp xếp
-            int pos = i - 1; // vi tri 
+            int x = list.get(i); 
+            int pos = i - 1; 
             while (pos >= 0 && x < list.get(pos)) {
                 list.set(pos + 1, list.get(pos));
                 --pos;
