@@ -33,6 +33,8 @@ class SinhVien {
 	public String toString() {
 		return String.format("%s %s %s %s %.2f", msv, name, lop, dob, gpa);
 	}
+
+	
 }
 
 public class J05003 {
