@@ -14,7 +14,7 @@ class InsertionSort {
             }
             list.set(pos + 1, x);
 
-            // In kết quả sau mỗi bước
+
             System.out.printf("Buoc %d: ", i);
             for (int k = 0; k <= i; k++) {
                 System.out.print(list.get(k) + " ");
