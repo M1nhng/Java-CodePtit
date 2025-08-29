@@ -19,19 +19,14 @@ class Fibonacci {
         return num_1;
     }
 }
-public class J01006 {
-    public static void main(String[] args) {
+public class J01007 {
+    public static void main(String agrs[]){
         Scanner scanner = new Scanner(System.in);
         int t = Integer.parseInt(scanner.nextLine());
-        while(t > 0){
-            t--;
-            long num = scanner.nextLong();
-            if (num > 92) {
-                System.out.println(Fibonacci.fibo(92));
-            } else {
-                System.out.println(Fibonacci.fibo(num));
-            }
+        Fibonacci fibonacci = new Fibonacci();
+        while (t-- > 0) {
+            int n = scanner.nextInt();
+            if(n = Fibonacci.num_1 )
         }
-        scanner.close();
     }
 }
