@@ -5,13 +5,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-class SinhVienn implements Comparable<SinhVienn> {
+class SinhVien1 implements Comparable<SinhVien1> {
 
     public static int NUM = 1;
     private String msv, ten, lop, ngaySinh;
     private float gpa;
 
-    public SinhVienn(String ten, String lop, String ngaySinh, float gpa) {
+    public SinhVien1(String ten, String lop, String ngaySinh, float gpa) {
         this.ten = formatName(ten);
         this.lop = lop;
         this.ngaySinh = formatDate(ngaySinh);
@@ -45,7 +45,7 @@ class SinhVienn implements Comparable<SinhVienn> {
     }
 
     @Override
-    public int compareTo(SinhVienn other) {
+    public int compareTo(SinhVien1 other) {
         return -(this.getGPA().compareTo(other.getGPA()));
     }
 
@@ -60,18 +60,18 @@ public class J05005 {
     public static void main(String[] args) {
         Scanner ip = new Scanner(System.in);
         int t = ip.nextInt();
-        List<SinhVienn> list = new ArrayList<>(t);
+        List<SinhVien1> list = new ArrayList<>(t);
         for (int i = 1; i <= t; i++) {
             ip.nextLine();
             String Name = ip.nextLine();
             String Room = ip.nextLine();
             String Date = ip.nextLine();
             float Gpa = ip.nextFloat();
-            SinhVienn p = new SinhVienn(Name, Room, Date, Gpa);
+            SinhVien1 p = new SinhVien1(Name, Room, Date, Gpa);
             list.add(p);
         }
         Collections.sort(list);
-        for (SinhVienn i : list) {
+        for (SinhVien1 i : list) {
             System.out.println(i);
         }
     }

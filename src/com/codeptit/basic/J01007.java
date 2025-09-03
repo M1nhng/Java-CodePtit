@@ -2,31 +2,28 @@ package com.codeptit.basic;
 
 import java.util.Scanner;
 
-class Fibonacci {
-    static long fibo(long n) {
-        if (n <= 0)
-            return 0;
-        if (n == 1 || n == 2) {
-            return 1;
-        }
-        long num_1 = 1;
-        long num_2 = 1;
-        for (long i = 3; i <= n; i++) {
-            long total = num_1 + num_2;
-            num_2 = num_1;
-            num_1 = total;
-        }
-        return num_1;
-    }
-}
 public class J01007 {
-    public static void main(String agrs[]){
+    static boolean isFibo(long n) {
+        if (n == 0 || n == 1)
+            return true;
+        long a = 0, b = 1;
+        while (b < n) {
+            long c = a + b;
+            a = b;
+            b = c;
+        }
+        return b == n;
+    }
+
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int t = Integer.parseInt(scanner.nextLine());
-        Fibonacci fibonacci = new Fibonacci();
+        int t = scanner.nextInt();
         while (t-- > 0) {
-            int n = scanner.nextInt();
-            if(n = Fibonacci.num_1 )
+            long n = scanner.nextLong();
+            if (isFibo(n))
+                System.out.println("YES");
+            else
+                System.out.println("NO");
         }
     }
 }
