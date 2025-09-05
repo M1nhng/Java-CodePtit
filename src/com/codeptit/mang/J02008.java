@@ -1,4 +1,4 @@
-package com.codeptit.basic;
+package com.codeptit.mang;
 import java.util.*;
 public class J02008{
     public static Scanner sc = new Scanner(System.in);

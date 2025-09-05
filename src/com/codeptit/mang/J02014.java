@@ -15,7 +15,6 @@ class DiemCanBang{
                 }
             }
         }
-        
     }
 }
 public class J02014 {
@@ -24,7 +23,7 @@ public class J02014 {
         int t = Integer.parseInt(scanner.nextLine());
         ArrayList<Integer> list = new ArrayList<>();
         while(t-- > 0){
-            int n = Integer.parseInt(scanner.nextLine());
+            int n = scanner.nextInt();
             if (n % 2 == 1) {
                 for (int i = 0; i < n; i++) {
                     list.add(scanner.nextInt());
