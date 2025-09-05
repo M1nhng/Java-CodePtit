@@ -1,55 +1,51 @@
 package com.codeptit.oop.quanhegiuacaclop;
-
 import java.util.*;
+
 public class J06003 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Infor> infor = new ArrayList<>();
-        int N = 0, M = 0;
-        N = Integer.parseInt(scanner.next());
-        M = Integer.parseInt(scanner.next());
+        int n = scanner.nextInt(); // so sinh vien
+        int m = scanner.nextInt(); // so nhom
         scanner.nextLine();
+        ArrayList<Infor> student = new ArrayList<>();
 
-        for(int i = 0; i <= N; i++){ 
-            infor.add(new Infor(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextInt()));
+        if (n > m) {
+            final boolean check = true;
         }
 
-        ArrayList<String> exercise = new ArrayList<>();
-        for(int i = 1; i <= M; i++){
+        while(n-- > 0){
+            student.add(new Infor(scanner.nextLine(), scanner.nextLine(), scanner.nextLine(), scanner.nextInt()));
+        }
+        
+        ArrayList<String> exercise = new ArrayList<>();   
+        for(int i = 1; i <= m; i++){
             exercise.add(scanner.nextLine());
         }
-
         int q = Integer.parseInt(scanner.nextLine());
-        while (q-- > 0) {
-            int index = Integer.parseInt(scanner.nextLine());
-            System.out.println(String.format("DANH SACH NHOM %d:", index));
-            infor.forEach(e -> {
-                if (e.nhom == index)
-                    System.out.println(e);
-            });
-            System.out.println(String.format("Bai tap dang ky: %s", exercise.get(index - 1)));
+        while(q--> 0){
+            
         }
-        scanner.close();
+        
+        
     }
 }
 
-class Infor {
-    private String msv;
+class Infor{
+    private String id;
     private String name;
-    private String sdt;
-    int nhom;
+    private String phone;
+    private int group;
 
-    public Infor(String msv, String name, String sdt, int nhom) {
-        this.msv = msv;
+    public Infor(String id, String name, String phone, int group){
+        this.id = id;
         this.name = name;
-        this.sdt = sdt;
-        this.nhom = nhom;
+        this.phone = phone;
+        this.group = group;
     }
 
     @Override
     public String toString() {
-        return msv + " " + name + " " + sdt;
+        return id + " " + name + " " + phone + " ";
     }
-
+    
 }
-

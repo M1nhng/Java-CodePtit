@@ -4,8 +4,7 @@ import java.util.Scanner;
 class Check{
     static void checknum(int n){
         int cnt = 0;
-        int sqrt = (int) Math.sqrt(n);
-        for (int i = 1; i <= sqrt; i++) {
+        for (int i = 1; i <= Math.sqrt(n); i++) {
             if (n % i == 0) {
             int j = n / i;
             if (i % 2 == 0) cnt++;

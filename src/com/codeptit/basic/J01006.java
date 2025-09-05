@@ -9,14 +9,14 @@ class Fibonacci {
         if (n == 1 || n == 2) {
             return 1;
         }
-        long num_1 = 1;
-        long num_2 = 1;
+        long prevnum_1 = 1;
+        long prevnum_2 = 1;
         for (long i = 3; i <= n; i++) {
-            long total = num_1 + num_2;
-            num_2 = num_1;
-            num_1 = total;
+            long total = prevnum_1 + prevnum_2;
+            prevnum_2 = prevnum_1;
+            prevnum_1 = total;
         }
-        return num_1;
+        return prevnum_1;
     }
 }
 public class J01006 {
