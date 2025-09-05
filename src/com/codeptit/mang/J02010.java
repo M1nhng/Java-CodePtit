@@ -1,4 +1,4 @@
-package com.codeptit.basic;
+package com.codeptit.mang;
 import java.util.*;
 class InterchangeSort{
     static void interchangeSort(ArrayList<Integer> list){

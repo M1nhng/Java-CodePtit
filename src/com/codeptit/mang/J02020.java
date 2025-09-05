@@ -1,4 +1,4 @@
-package com.codeptit.basic;
+package com.codeptit.mang;
 
 class LietKeToHop_1{
     
