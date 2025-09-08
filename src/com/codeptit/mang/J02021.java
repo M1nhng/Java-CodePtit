@@ -2,7 +2,7 @@ package com.codeptit.mang;
 
 import java.util.*;
 
-public class J02020 {
+public class J02021 {
     static int n, k, a[], ok, cnt;
 
     static void khoitao() {
@@ -18,7 +18,7 @@ public class J02020 {
             cnt++;
         }
         if (i == 0) {
-            ok = 0; 
+            ok = 0;
         } else {
             a[i]++;
             for (int j = i + 1; j <= k; j++) {
@@ -40,9 +40,10 @@ public class J02020 {
             for (int i = 1; i <= k; i++) {
                 System.out.print(a[i]);
             }
-            System.out.println();
+            System.out.print(" ");
             sinh();
         }
+        System.out.println();
         System.out.printf("Tong cong co %d to hop\n", cnt);
     }
 }
