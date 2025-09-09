@@ -25,5 +25,6 @@ public class J01007 {
             else
                 System.out.println("NO");
         }
+        scanner.close();
     }
 }

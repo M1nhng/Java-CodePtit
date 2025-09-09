@@ -44,5 +44,6 @@ public class J02020 {
             sinh();
         }
         System.out.printf("Tong cong co %d to hop\n", cnt);
+        scanner.close();
     }
 }

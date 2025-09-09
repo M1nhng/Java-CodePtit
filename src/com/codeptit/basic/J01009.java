@@ -13,5 +13,6 @@ public class J01009 {
             sum += tich;
         }
         System.out.println(sum);
+        scanner.close();
     }
 }
