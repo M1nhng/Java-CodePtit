@@ -15,7 +15,6 @@ public class J02021 {
         int i = k;
         while (i >= 1 && a[i] == n - k + i) {
             --i;
-            cnt++;
         }
         if (i == 0) {
             ok = 0;
@@ -34,6 +33,7 @@ public class J02021 {
 
         a = new int[k + 1];
         ok = 1;
+        cnt = 0;
 
         khoitao();
         while (ok == 1) {
@@ -41,9 +41,10 @@ public class J02021 {
                 System.out.print(a[i]);
             }
             System.out.print(" ");
+            cnt++;
             sinh();
         }
         System.out.println();
-        System.out.printf("Tong cong co %d to hop\n", cnt);
+        System.out.printf("Tong cong co %d to hop", cnt);
     }
 }
