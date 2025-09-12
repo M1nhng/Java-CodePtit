@@ -10,20 +10,21 @@ public class J08015 {
 		
 		while(t--> 0) {
 			int n = scanner.nextInt();
-			int k = scanner.nextInt();
-			int a[] = new int[n];
-			int cnt = 0;
+			long k = scanner.nextLong();
+			long a[] = new long[n];
+			long cnt = 0;
 			
 			for(int i = 0; i < n; i++) {
 				a[i] = scanner.nextInt();					
 			}
 			
+			Map<Long, Integer> map = new HashMap<>();
 			for(int i = 0; i < n; i++) {
-				for(int j = i + 1; j < n; j++) {
-					if(Math.abs(a[i]) + Math.abs(a[j]) == k) {
-						cnt++;
-					}
+				long need = k - a[i];
+				if(map.containsKey(need)) {
+					cnt += map.get(need);
 				}
+				map.put(a[i], map.getOrDefault(a[i], (int) 0L) + 1);
 			}
 			System.out.println(cnt);
 		}
